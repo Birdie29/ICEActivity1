@@ -8,13 +8,54 @@ namespace ICEActivity1
 {
     internal class Program
     {
+        static Student[] students =
+            { new Student("Apple", "ST001", 75),
+             new Student("Derrick", "ST002", 88),
+             new Student("Kelly", "ST003", 98),
+             new Student("John", "ST004", 70),
+             new Student("Sam", "ST005", 100)
+        };
+
+        static void DisplayStudentInformation() 
+        {
+            Console.WriteLine("Studnet Information Thread Started...");
+            for(int i=0; i<students.Length; i++)
+            {
+                Console.WriteLine("Student:" + students[i].studentName);
+                Console.WriteLine("Student Number:" + students[i].studentNumber);
+                Console.WriteLine("Marks:" + students[i].marks);
+                Console.WriteLine();
+
+            }
+            Console.WriteLine("Student Information Thread Completed.");
+        }
+
+        static void CalculateAverage()
+        {
+            Console.WriteLine("Calculating Average Thred Started...");
+            double total = 0;
+            for (int i = 0; i < students.Length; i++)
+            {
+                total = total + students[i].marks;
+            }
+            double average = total / students.Length;
+            Console.WriteLine("Average Mark:" + average);
+            Console.WriteLine("Calculating Average Thread Completed.");
+
+        }
+
+        static void generateReport()
+        {
+            Console.WriteLine("Report Thread Started...");
+            for (int i = 0; i < students.Length; i++) 
+            {
+                Console.WriteLine(students[i].studentName + "-" + students[i].marks);
+            }
+            Console.WriteLine("Report Generation Complete.");
+        }
         static void Main(string[] args)
         {
-            string[] studentNames = { "Apple", "Gail", "Kyle", "Damien", "Poppy" };
-            string[] studentNumbers = {"ST001", "ST002", "ST003", "ST004", "ST005" };
-            double[] marks = { 75, 88, 98, 76, 100 };
-
-              
+            
         }
         
 
