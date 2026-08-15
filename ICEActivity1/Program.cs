@@ -65,6 +65,13 @@ namespace ICEActivity1
             studentThread.Start();
             averageThread.Start();
             reportThread.Start();
+
+            studentThread.Join();
+            averageThread.Join();
+            reportThread.Join();
+
+            Console.WriteLine();
+            Console.WriteLine("All tasks completed.");
         }
         
 
