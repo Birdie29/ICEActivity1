@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Threading
+using System.Threading;
 namespace ICEActivity1
 {
     internal class Program
@@ -44,12 +44,12 @@ namespace ICEActivity1
                 studentNumber = "ST005",
                 marks = 70
             };
-
-            static void DisplayStudentInformation() 
-            {
-                Console.WriteLine("Student Information Thread Started...");
-            }
-               
         }
+        static void DisplayStudentInformation()
+        {
+           
+
+        }
+
     }
 }

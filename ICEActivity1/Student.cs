@@ -11,6 +11,13 @@ namespace ICEActivity1
         public string studentName {get; set; }
         public string studentNumber { get; set; }
         public double marks { get; set; }
+
+        public Student(string studentName, string studentNumber, double marks) 
+        {
+            studentName = studentName;
+            studentNumber = studentNumber;
+            marks = marks;
+        }
     }
 
     
