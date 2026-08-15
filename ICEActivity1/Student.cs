@@ -12,4 +12,6 @@ namespace ICEActivity1
         public string studentNumber { get; set; }
         public double marks { get; set; }
     }
+
+    
 }
