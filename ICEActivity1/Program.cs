@@ -55,7 +55,16 @@ namespace ICEActivity1
         }
         static void Main(string[] args)
         {
-            
+            Console.WriteLine("Multithread Student Task Manager");
+            Console.WriteLine();
+
+            Thread studentThread = new Thread(DisplayStudentInformation);
+            Thread averageThread = new Thread(CalculateAverage);
+            Thread reportThread = new Thread(generateReport);
+
+            studentThread.Start();
+            averageThread.Start();
+            reportThread.Start();
         }
         
 
